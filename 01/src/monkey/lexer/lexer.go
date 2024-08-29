@@ -1,7 +1,7 @@
 package lexer
 
 import (
-	"fmt"
+	// "fmt"
 	"monkey/token"
 )
 
@@ -40,7 +40,7 @@ func (l *Lexer) NextToken() token.Token {
 	var tok token.Token
 
 	l.skipWhitespace()
-	fmt.Println(l.position, string(l.ch))
+	// fmt.Println(l.position, string(l.ch))
 
 	switch l.ch {
 	case '=':
@@ -144,7 +144,7 @@ func (l *Lexer) readNumber() string {
 
 func (l *Lexer) skipWhitespace() {
 	for l.ch == ' ' || l.ch == '\t' || l.ch == '\n' || l.ch == '\r' {
-		fmt.Println(l.ch)
+		// fmt.Println(l.ch)
 		l.readChar()
 	}
 }
